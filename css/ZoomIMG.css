@@ -1,0 +1,18 @@
+.image-frame img{
+	height:350px;
+	max-width:100%;
+	object-fit:cover;
+	 -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.image-frame:hover img{
+	-moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+	transform: scale(1.06);
+	-webkit-filter:blur(2px);
+  filter: blur(2px);
+}
+ 
+ 
+ 

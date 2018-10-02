@@ -6,7 +6,7 @@
 }
 
 p {
-    color: #6c6c6f;
+    color: #010127;
     font-size: 1em;
 }
 
@@ -85,7 +85,7 @@ nav {
 }
 
 .banner-text {
-    padding: 200px 0 150px 0;
+    padding: 80px 0 150px 0;
 }
 
 .banner-heading {
@@ -122,9 +122,7 @@ nav {
 }
 
 .text-intro {
-    width: 90%;
-    margin: auto;
-    text-align: center;
+
     padding-top: 30px;
 }
 
@@ -179,11 +177,28 @@ nav {
 
 body {
     background-color: #f3edc3;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.SchoolRows {
+    padding: 40px;
+}
+
+.header {
+    margin: 60px 25px 25px 25px;
+
+}
+
+.LogosHead {
+    margin-top: 15px;
+    height: 200px;
 }
 
 .Logos {
     margin-top: 15px;
-    height: 200px;
+    height: 150px;
+    float: right;
 }
 
 .DiscoverPics {
@@ -195,4 +210,26 @@ body {
 #Discover {
     background-color: #787669;
     border-radius: 30px;
+    margin-left:20px;
+}
+
+
+
+
+.news_img {
+    margin: 0 20 0 20;
+    float: left;
+}
+
+.trailer_button {
+    z-index: 999;
+    float: left;
+    margin: 1 20 -20 20;
+    width: 181px;
+    border-radius: 10px;
+}
+
+.buttonimg {
+    width: auto;
+    height: auto;
 }
