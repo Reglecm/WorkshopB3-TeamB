@@ -6,6 +6,7 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/Q.css" type="text/css">
     <meta charset="utf-8">
     <meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
 </head>
@@ -23,8 +24,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <button style="margin-left:10px;" href="/STV.html" type="button" class="btn btn-warning text-dark btn-banner">Découvrez
-                    les locaux en StreetView</button>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
@@ -42,7 +41,7 @@
             </div>
         </div>
     </nav>
- 
+
     <div style="margin:65px 0px 10px 0px;">
         <div class="banner">
             <div class="row match-to-row">
@@ -60,9 +59,37 @@
         </div>
 
     </div>
- 
+
+
+    <div class="container" style="margin-top:100px;">
+        <div class="row" style="text-align: center;">
+            <div class="col" style="margin-left: 30%; margin-right: 30%;">
+                <div id="Qnote">
+
+                    <h4 id="Question" class="alert alert-info"></h4>
+                    <div class="lines">
+                        <div><input class="RB" name="ans" id="Ans1" type="radio"></div>
+                        <div><input class="RB" name="ans" id="Ans2" type="radio"></div>
+                        <div><input class="RB" name="ans" id="Ans3" type="radio"></div>
+                    </div>
+
+
+                    <ul class="list" id="Reponses">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                 
+                </div>
+                
+            </div>
+            <button id="Valider" style="margin-left: auto;margin-right: auto;" class="btn btn-success btn-lg">Valider</button>
+        </div>
+
+    </div>
+
 </body>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript" src="js/STV.js"></script>
+<script type="text/javascript" src="js/Q.js"></script>
 
 </html>
