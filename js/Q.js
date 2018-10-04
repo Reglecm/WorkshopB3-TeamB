@@ -184,16 +184,14 @@ function ThrowResults(Reps) {
                     }
                 }
                 break;
-
             default:
-
         }
     });
     var chart = '<canvas id="myChart" width="400" height="400"></canvas>';
 
     var Qnote = $('#Qnote')[0];
     $(Qnote).html(chart);
-   
+
     $('#Valider').hide();
 
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -210,6 +208,5 @@ function ThrowResults(Reps) {
         data: data,
         type: "polarArea"
     });
-    
     $(Qnote).css('transform', 'translateX(50px)');
 }
