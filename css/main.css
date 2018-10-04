@@ -210,11 +210,10 @@ body {
 #Discover {
     background-color: #787669;
     border-radius: 30px;
- 
+
 }
 
-
-
+ 
 
 .news_img {
     margin: 0 20 0 20;
@@ -235,8 +234,14 @@ body {
 }
 
 
-#STVFrame{
+#STVFrame {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
+
+#view-stereo > *{
+    font-size: 50px;
+    background-color: blue;
+}
+ 
