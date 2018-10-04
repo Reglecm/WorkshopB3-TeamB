@@ -189,5 +189,27 @@ function ThrowResults(Reps) {
 
         }
     });
-    console.log(Epsi,Wis,Ifag);
+    var chart = '<canvas id="myChart" width="400" height="400"></canvas>';
+
+    var Qnote = $('#Qnote')[0];
+    $(Qnote).html(chart);
+   
+    $('#Valider').hide();
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+    data: data = {
+        datasets: [{
+            data: [Epsi, Wis, Ifag],
+            backgroundColor: ["#FF6384", "#4BC0C0", "#FFCE56"],
+            label: "My dataset"
+        }],
+        labels: ["EPSI", "WIS", "IFAG"]
+    }
+    var ctx = $("#myChart");
+    new Chart(ctx, {
+        data: data,
+        type: "polarArea"
+    });
+    
+    $(Qnote).css('transform', 'translateX(50px)');
 }
