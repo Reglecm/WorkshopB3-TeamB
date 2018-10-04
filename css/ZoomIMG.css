@@ -6,14 +6,39 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
+
+
 .image-frame:hover img{
 	-moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
 	transform: scale(1.06);
-	-webkit-filter:blur(2px);
-  filter: blur(2px);
-}
+	height:350px;
  
+ 
+}
+
+.DiscoverPicsVR:hover{
+	box-shadow:
+			0 0 10px 5px #ACDAF5,  
+			0 0 20px 10px #3A7BC1, 
+			0 0 140px 20px #07376D; 
+}
+
+.DiscoverPicsQ:hover{
+	box-shadow:
+			0 0 10px 5px #ACDAF5,  
+			0 0 20px 10px #ACDAF5, 
+			0 0 140px 20px #ACDAF5; 
+}
+
+
+.DiscoverPicsSTV:hover{
+	box-shadow:
+			0 0 10px 5px #333333,  
+			0 0 20px 10px #808080, 
+			0 0 140px 20px #969696; 
+}
 
 
   
