@@ -197,9 +197,11 @@ body {
 
 .Logos {
     margin-top: 15px;
-    height: 150px;
+    max-height: 150px;
     float: right;
 }
+
+
 
 .DiscoverPics {
     height: 400px;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/Q.css" type="text/css">
     <meta charset="utf-8">
     <meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -68,16 +69,16 @@
 
                     <h4 id="Question" class="alert alert-info"></h4>
                     <div class="lines">
-                        <div><input class="RB" name="ans" id="Ans1" type="radio"></div>
-                        <div><input class="RB" name="ans" id="Ans2" type="radio"></div>
-                        <div><input class="RB" name="ans" id="Ans3" type="radio"></div>
+                        <div><input class="RB RB1" name="ans" value="1" type="radio"></div>
+                        <div><input class="RB RB2" name="ans" value="2" type="radio"></div>
+                        <div><input class="RB RB3" name="ans" value="3" type="radio"></div>
                     </div>
 
 
                     <ul class="list" id="Reponses">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li style="cursor: pointer;" value="1"></li>
+                        <li style="cursor: pointer;" value="2"></li>
+                        <li style="cursor: pointer;" value="3"></li>
                     </ul>
                  
                 </div>

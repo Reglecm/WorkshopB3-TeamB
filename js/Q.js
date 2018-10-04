@@ -1,15 +1,35 @@
 $(document).ready(function () {
 
     var i = 0;
+    $("input[name=ans][value=" + 1 + "]").prop('checked', true);
+    i = DoQuizz(i);
+    $("input[name=ans][value=" + 1 + "]").prop('checked', false);
+
 
     $('#Valider').click(function () {
-        if (i <= 6) {
-            i = DoQuizz(i);
+        var r = $('input[name=ans]:checked')[0];
+        Repondues.push($(r).val());
+        if ($(r).val()) {
+            $('input[name="ans"]:checked').prop('checked', false); //uncheck previous radio
+            if (i <= 6) {
+                i = DoQuizz(i);
+            } else {
+                ThrowResults(Repondues);
+            }
         } else {
-            ThrowResults();
+            swal(
+                'Votre choix?',
+                'Choisissez une réponse',
+                'warning'
+            )
         }
-
     })
+
+
+    $('.list').on("click", "li", function () {
+        $("input[name=ans][value=" + $(this).val() + "]").prop('checked', true);
+    })
+
 });
 
 
@@ -17,13 +37,13 @@ $(document).ready(function () {
 var Qarray = ["1.	Que voulez-vous faire plus tard ?", "2.	Avez-vous des notions dans :", "3.	Je suis plutôt à la recherche d’une formation :", "4.	Je suis plutôt attiré par:", "5.	Je suis plutôt à l’aise sur :", "6.  Préfères-tu travailler dans le domaine de: l'informatique ou dans d'autres domaines?", "7.  Es-tu plutôt quelqu'un qui aime: la technique, le management, la créativité?"];
 
 var Rarray = [
-    ["Du développement informatique", "De entrepreneuriat", "De la gestion de projet"],
+    ["Du développement informatique", "De l'entrepreneuriat", "De la gestion de projet"],
     ["Le développement informatique", "La communication", "Le management"],
     ["En alternance", "En initial ", "Je ne sais pas encore"],
     ["Le web digital", "Le développement", "Le management"],
     ["Ordinateur", "Manager des équipes", "Entreprendre des projets"],
-    ["Informatique", "Le réseau", "d'Autre Domaines"],
-    ["Informatique", "Le réseau", "d'Autre Domaines"]
+    ["Informatique", "Le réseau", "d'Autres Domaines"],
+    ["La technique", "Le Management", "La créativité"]
 ];
 
 var Question = $('#Question');
@@ -31,12 +51,143 @@ var Reponses = $('#Reponses');
 
 var Repondues = [];
 
+var B1 = $('.RB1');
+var B2 = $('.RB2');
+var B3 = $('.RB3');
+
+
 function DoQuizz(i) {
-    console.log(i, 'in');
-    $(Question).text(Qarray[i]);
-    for (var k = 0; k != 3; k++) {
+    $(Question).text(Qarray[i]); //set Question
+    for (var k = 0; k != 3; k++) { //fill answers
         var r = $('#Reponses').children()[k];
         $(r).text(Rarray[i][k]);
     }
+
     return i += 1;
+}
+
+function ThrowResults(Reps) {
+    var Epsi = 0;
+    var Wis = 0;
+    var Ifag = 0;
+
+    Reps.forEach(function (rep, i) {
+        switch (i) {
+            case 0:
+                if (rep == 1) {
+                    Epsi += 1;
+                } else {
+                    if (rep == 2) {
+                        Ifag += 1;
+                    } else {
+                        if (rep == 3) {
+                            Wis += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 1:
+                if (rep == 1) {
+                    Epsi += 1;
+                } else {
+                    if (rep == 2) {
+                        Wis += 1;
+                    } else {
+                        if (rep == 3) {
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 2:
+                if (rep == 1) {
+                    Epsi += 1;
+                    Wis += 1;
+                    Ifag += 1;
+                } else {
+                    if (rep == 2) {
+                        Epsi += 1;
+                        Wis += 1;
+                        Ifag += 1;
+                    } else {
+                        if (rep == 3) {
+                            Epsi += 1;
+                            Wis += 1;
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 3:
+                if (rep == 1) {
+                    Wis += 1;
+                } else {
+                    if (rep == 2) {
+                        Epsi += 1;
+                    } else {
+                        if (rep == 3) {
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 4:
+                if (rep == 1) {
+                    Epsi += 1;
+                } else {
+                    if (rep == 2) {
+                        Wis += 1;
+                    } else {
+                        if (rep == 3) {
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 5:
+                if (rep == 1) {
+                    Epsi += 1;
+                    Wis += 1;
+                } else {
+                    if (rep == 2) {
+                        Epsi += 1;
+                    } else {
+                        if (rep == 3) {
+                            Wis += 1;
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            case 6:
+                if (rep == 1) {
+                    Epsi += 1;
+                    Wis += 1;
+                    Ifag += 1;
+                } else {
+                    if (rep == 2) {
+                        Epsi += 1;
+                        Wis += 1;
+                        Ifag += 1;
+                    } else {
+                        if (rep == 3) {
+                            Epsi += 1;
+                            Wis += 1;
+                            Ifag += 1;
+                        }
+                    }
+                }
+                break;
+
+            default:
+
+        }
+    });
+    console.log(Epsi,Wis,Ifag);
 }
