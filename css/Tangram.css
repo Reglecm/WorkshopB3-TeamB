@@ -1,6 +1,9 @@
  #Tangram {
      position: relative;
      margin: 50px 0px 50px 0px;
+     height: 300px;
+   
+
  }
 
  .piece {
@@ -8,37 +11,43 @@
  }
 
  .square {
-     left: 46vw;
+     left: 46.4%;
+     top: 0%
  }
 
  .TdownOrange {
-     left: 49.2vw;
+     left: 49.7%;
+     top: 0%
  }
 
  .Parallelogram {
-     left: 49.1vw;
-     top: -3.3vw;
+     left: 49.6%;
+     top: -21%;
  }
 
 
  .TDownBlue {
-     left: 45.9vw;
-     top: 3.4vw;
+     left:46.3%;
+     top: 22%;
  }
 
  .TLeftRed {
-    left: 46vw;
-    top: -3.3vw;
+     left: 46.4%;
+     top: -21%;
  }
 
  .TLeftPurple {
-     left: 43.5vw;
-     top: 3.4vw;
+     left: 44.5%;
+     top: 21%;
  }
 
 
 
- .TRightGreen {
-     left:52.5vw;
-     top:-3.3vw;
+ .TRightGreen{
+     left: 53%;
+     top: -21%;
  }
+
+
+ 
+	

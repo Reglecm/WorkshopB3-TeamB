@@ -1,5 +1,5 @@
 .image-frame img{
-	/* height:350px; */
+	height:350px;
 	max-width:100%;
 	object-fit:cover;
 	 -moz-transition: all 0.3s;
@@ -14,5 +14,7 @@
   filter: blur(2px);
 }
  
- 
+
+
+  
  
