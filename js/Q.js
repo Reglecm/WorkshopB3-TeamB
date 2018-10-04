@@ -1,20 +1,16 @@
 $(document).ready(function () {
 
-    $('#Valider').click(function DoQuizz(i) {
+    var i = 0;
 
-        $(Question).text(Qarray[i]);
-        for (var k = 0; k != 3; k++) {
-            var r = $('#Reponses').children()[k];
-            $(r).text(Rarray[i][k]);
+    $('#Valider').click(function () {
+        if (i <= 6) {
+            i = DoQuizz(i);
+        } else {
+            ThrowResults();
         }
-        console.log(i, 'in');
-        i += 1;
-        console.log(i, 'in');
 
     })
 });
-
-
 
 
 
@@ -32,3 +28,15 @@ var Rarray = [
 
 var Question = $('#Question');
 var Reponses = $('#Reponses');
+
+var Repondues = [];
+
+function DoQuizz(i) {
+    console.log(i, 'in');
+    $(Question).text(Qarray[i]);
+    for (var k = 0; k != 3; k++) {
+        var r = $('#Reponses').children()[k];
+        $(r).text(Rarray[i][k]);
+    }
+    return i += 1;
+}
