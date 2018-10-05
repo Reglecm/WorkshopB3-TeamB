@@ -122,8 +122,8 @@ nav {
 }
 
 .text-intro {
-
     padding-top: 30px;
+    font-size: 16px;
 }
 
 
@@ -216,7 +216,6 @@ body {
 }
 
  
-
 .news_img {
     margin: 0 20 0 20;
     float: left;
@@ -246,4 +245,3 @@ body {
     font-size: 50px;
     background-color: blue;
 }
- 
