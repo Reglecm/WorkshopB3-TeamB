@@ -15,23 +15,17 @@ $(document).ready(function () {
         }, 1000);
     })
 
-    $('.TLeftPurple').mouseleave(function () {
-
-    })
-
 })
 
 // $('#DiscoverPicsSTV')
 
 $(document).on("scroll", function () {
-
     if ($(document).scrollTop() > 100) {
         $("#banner").addClass("shrink");
         $("#banner").slideDown(400);
     } else {
         $("#banner").slideUp(400)
     }
-
 });
 
 
@@ -53,7 +47,5 @@ $(document).on("scroll", function () {
 //     });
 //     $('#' + MaskID).width(ElemRect.width);
 //     $('#' + MaskID).height(ElemRect.height);
-
-
 
 // });

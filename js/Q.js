@@ -9,6 +9,7 @@ $(document).ready(function () {
     $('#Valider').click(function () {
         var r = $('input[name=ans]:checked')[0];
         Repondues.push($(r).val());
+
         if ($(r).val()) {
             $('input[name="ans"]:checked').prop('checked', false); //uncheck previous radio
             if (i <= 6) {
@@ -62,7 +63,6 @@ function DoQuizz(i) {
         var r = $('#Reponses').children()[k];
         $(r).text(Rarray[i][k]);
     }
-
     return i += 1;
 }
 
@@ -70,6 +70,7 @@ function ThrowResults(Reps) {
     var Epsi = 0;
     var Wis = 0;
     var Ifag = 0;
+ 
 
     Reps.forEach(function (rep, i) {
         switch (i) {
@@ -187,6 +188,7 @@ function ThrowResults(Reps) {
             default:
         }
     });
+    
     var chart = '<canvas id="myChart" width="400" height="400"></canvas>';
 
     var Qnote = $('#Qnote')[0];
